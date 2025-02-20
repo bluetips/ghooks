@@ -10,7 +10,7 @@ gulp.task('clean', async () => {
 });
 
 gulp.task('es', () => {
-  const tsProject = ts.createProject('tsconfig.json', {
+  const tsProject = ts.createProject('tsconfig.pro.json', {
     module: 'ESNext',
   });
   return tsProject.src().pipe(tsProject()).pipe(babel()).pipe(gulp.dest('es/'));
