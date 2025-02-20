@@ -19,3 +19,6 @@ yarn-error.log
 package-lock.json
 metadata.json
 .eslintcache
+node_modules
+
+.dumi

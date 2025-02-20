@@ -3,7 +3,6 @@
   "compilerOptions": {
     "target": "ES5",
     "moduleResolution": "node",
-    "lib": ["ESNext", "DOM"],
     "jsx": "react", // 将jsx转换成React.createElement
     "esModuleInterop": true, // 允许commonjs和ESM混用
     "downlevelIteration": true, // 迭代器支持
@@ -11,12 +10,25 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "encode-hooks": ["./packages/hooks/src/index.ts"]
+      "encodeHooks": ["./packages/hooks/src/index.ts"],
+      "encode-hooks": ["./packages/hooks/src/index.ts"],
+      "encodeHooks/lib/*": ["./packages/hooks/src/*"],
+      "encode-hooks/lib/*": ["./packages/hooks/src/*"]
     },
     "allowSyntheticDefaultImports": true, // 默认导出
     "skipLibCheck": true,
     "strictNullChecks": true, // 开启严格检查，null和undefined不会隐式赋值给其它类型变量
     "importHelpers": true // 从tslib中导入辅助函数，而不是内联辅助函数
   },
-  "exclude": ["node_modules", "lib", "es", "dist", "example"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "example",
+    "**/__tests__",
+    "**/__test__",
+    "**/demo",
+    "gulpfile.js"
+  ]
 }
