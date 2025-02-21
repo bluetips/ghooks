@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     // 指定 TypeScript 编译器在编译过程中查找源文件的根目录为 "src" 文件夹

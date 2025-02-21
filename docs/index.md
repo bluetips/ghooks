@@ -1,23 +1,35 @@
 ---
-title: A static site based on dumi
+title: 首页
 hero:
-  title: Site
-  description: A static site based on dumi
+  title: wang-react-hooks
+  description: 一个基于react库实现的自定义hooks
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
+    - text: 指南
+      link: /guide
+    - text: hooks列表
+      link: /hooks
 features:
-  - title: Hello
+  - title: 可靠的代码健壮
     emoji: 💎
-    description: Put hello description here
-  - title: World
+    description: 使用 Typescript 构建，提供完善的类型定义文件
+  - title: 完善的文档能力
     emoji: 🌈
-    description: Put world description here
-  - title: '!'
+    description: 支持文档记录，支持 demo 演示
+  - title: 完整的测试用例
     emoji: 🚀
-    description: Put ! description here
+    description: 配套完整的测试用例，帮助您提升项目健壮性
 ---
 
-.
+## 📦 安装
+
+```bash
+$ pnpm install --save encode-hooks
+# or
+$ yarn add encode-hooks
+```
+
+## 🔨 使用
+
+```ts
+import { useToggle } from 'encode-hooks';
+```
