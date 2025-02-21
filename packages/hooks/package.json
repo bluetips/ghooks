@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "webpack": "webpack-cli",
+    "build": "gulp && webpack-cli"
   },
   "keywords": [],
   "author": "",

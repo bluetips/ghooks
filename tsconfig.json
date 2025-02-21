@@ -20,14 +20,5 @@
     "strictNullChecks": true, // 开启严格检查，null和undefined不会隐式赋值给其它类型变量
     "importHelpers": true // 从tslib中导入辅助函数，而不是内联辅助函数
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "es",
-    "dist",
-    "example",
-    "**/__tests__",
-    "**/__test__",
-    "gulpfile.js"
-  ]
+  "exclude": ["node_modules", "lib", "es", "dist", "example"]
 }

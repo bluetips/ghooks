@@ -111,7 +111,7 @@ pnpm i tslib -w
 
 这样当执行`pnpm run gulp`指令就会读取当前项目的 gulpfile.js 文件进行编译。
 
-- 需要注意的是 gulp-typescript,调用它的 src 方法，他会以配置的 tsconfig.json 文件为基准，寻找入口文件，需要编译的文件
+- 需要注意的是 gulp-typescript,调用它的 src 方法，他会以配置的 tsconfig.json 文件为基准，寻找入口文件，需要编译的文件，exclude 属性比较重要，决定了最终不打包哪些文件，如在项目中的**test** 目录以及 Demo 需要排除在外。
 
 10. webpack 配置
 
@@ -122,3 +122,5 @@ pnpm i tslib -w
 ```bash
 pnpm i webpack webpack-cli webpack-merge -D -w
 ```
+
+打包流程分析：首先通过 gulp 打包成 esm 包、cjs 包，然后通过 webpack 打包成 umd 包，因为 gulp 不能直接打包成 umd 包
