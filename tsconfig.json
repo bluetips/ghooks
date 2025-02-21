@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "ES5",
     "moduleResolution": "node",
+    "lib": ["ES2015", "DOM"],
     "jsx": "react", // 将jsx转换成React.createElement
     "esModuleInterop": true, // 允许commonjs和ESM混用
     "downlevelIteration": true, // 迭代器支持

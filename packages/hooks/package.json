@@ -13,6 +13,6 @@
   "license": "ISC",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^19.0.0"
+    "react": "^18.3.1"
   }
 }

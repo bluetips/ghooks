@@ -124,3 +124,18 @@ pnpm i webpack webpack-cli webpack-merge -D -w
 ```
 
 打包流程分析：首先通过 gulp 打包成 esm 包、cjs 包，然后通过 webpack 打包成 umd 包，因为 gulp 不能直接打包成 umd 包
+
+11. jest 测试环境搭建
+
+```bash
+# ts-jest @types/jest 继承typescript环境
+# @testing-library/react @testing-library/jest-dom 集成react环境
+# jest-localstorage-mock模拟浏览器storage
+# jest-environment-jsdom node模拟浏览器环境
+pnpm i jest ts-jest @types/jest @testing-library/react @testing-library/jest-dom jest-localstorage-mock jest-environment-jsdom -D -w
+
+# 生成jest.config.js文件，一直点下去，然后根据需求配置即可。或者自己手动新建
+npx jest --init
+```
+
+测试过程出问题可能是 react 版本不匹配，默认 react 版本是 19，改成 18 和@testing-library/react 库保持一致的 react 版本即可
