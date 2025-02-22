@@ -9,6 +9,7 @@ gulp.task('clean', async () => {
   deleteSync('dist/**');
 });
 
+// 打esm包
 gulp.task('es', () => {
   const tsProject = ts.createProject('tsconfig.pro.json', {
     module: 'ESNext',
@@ -16,6 +17,7 @@ gulp.task('es', () => {
   return tsProject.src().pipe(tsProject()).pipe(babel()).pipe(gulp.dest('es/'));
 });
 
+// 根据esm包打commonjs包
 gulp.task('cjs', () => {
   return gulp
     .src(['./es/**/*.js'])
@@ -27,4 +29,18 @@ gulp.task('cjs', () => {
     .pipe(gulp.dest('lib/'));
 });
 
-export default gulp.series('clean', 'es', 'cjs');
+// 生成d.ts文件
+gulp.task('declaration', () => {
+  const tsProject = ts.createProject('tsconfig.pro.json', {
+    declaration: true,
+    emitDeclarationOnly: true,
+  });
+  return tsProject.src().pipe(tsProject()).pipe(gulp.dest('es/')).pipe(gulp.dest('lib/'));
+});
+
+// 生成README文件
+gulp.task('copyReadme', () => {
+  return gulp.src('../../README.md').pipe(gulp.dest('../../packages/hooks'))
+})
+
+export default gulp.series('clean', 'es', 'cjs', 'declaration', 'copyReadme');
