@@ -16,6 +16,8 @@ pnpm init
 pnpm i -g encode-fe-lint
 # 生成linter文件
 encode-fe-lint init
+# 安装husky让钩子函数生效
+pnpm i -D -w husky
 ```
 
 3. 生成 typescript 配置文件
@@ -139,3 +141,9 @@ npx jest --init
 ```
 
 测试过程出问题可能是 react 版本不匹配，默认 react 版本是 19，改成 18 和@testing-library/react 库保持一致的 react 版本即可
+
+12. 自动化部署流程配置
+
+本项目基于github actions实现自动化部署，所以需要有自己的github账号，生成自己的ssh密钥
+
+1. 新建.github/workflows文件，然后根据需求写yaml脚本
