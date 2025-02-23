@@ -1,5 +1,5 @@
 {
-  "name": "wang-react-hooks",
+  "name": "ghooks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,6 +26,11 @@
     "@types/jest": "^29.5.14",
     "del": "^8.0.0",
     "encode-fe-lint": "^1.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-drag-listview": "^0.1.6",
+    "react-router": "^6.4.2",
+    "react-shadow": "^19.0.3",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.0",
     "gray-matter": "^4.0.3",

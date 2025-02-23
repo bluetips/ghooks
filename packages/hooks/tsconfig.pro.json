@@ -1,8 +1,0 @@
-{
-  "extends": "../../tsconfig.pro.json",
-  "compilerOptions": {
-    "rootDir": "src"
-    // 有composite，gulp编译就会报错
-    // "composite": true
-  }
-}

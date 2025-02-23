@@ -1,5 +1,6 @@
 ---
-nav: Hooks
+nav:
+ path: /hooks 
 ---
 
 # useToggle

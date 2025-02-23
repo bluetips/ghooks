@@ -1,7 +1,7 @@
 ---
 title: 首页
 hero:
-  title: wang-react-hooks
+  title: rhooks
   description: 一个基于react库实现的自定义hooks
   actions:
     - text: 指南

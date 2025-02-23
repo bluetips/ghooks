@@ -6,10 +6,10 @@ import path from 'path';
 
 export default defineConfig({
   hash: true,
-  favicons: ['/logo.png'],
+  favicons: ['/short-logo.png'],
   themeConfig: {
     name: '',
-    logo: '/logo.png',
+    logo: '/short-logo.png',
     showLineNum: true,
   },
   alias: {
