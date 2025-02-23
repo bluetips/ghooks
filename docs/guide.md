@@ -61,6 +61,6 @@ pnpm run changelog
 ## 📧 联系
 
 - **邮箱**    xyuniv@126.com
-- **GitHub**: <https://github.com/Front-end-coder/wang-react-hooks>
+- **GitHub**: <https://github.com/bluetips/ghooks.git>
 
 </br>
