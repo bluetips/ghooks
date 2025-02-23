@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm ",
+    "prepare": "husky install",
+    "init": "SET NODE_OPTIONS=--openssl-legacy-provider&&pnpm install && pnpm run build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider&&pnpm run dev",
     "dev": "dumi dev",
+    "build": "pnpm -r --filter=./packages/* run build",
     "build:doc": "dumi build",
-    "build": "pnpm --filter=./packages/* run build",
+    "pub": "pnpm run build && pnpm -r --filter=./packages/* publish",
+    "pub:beta": "pnpm run build && pnpm -r --filter=./packages/* publish --tag beta",
     "encode-fe-lint-scan": "encode-fe-lint scan",
     "encode-fe-lint-fix": "encode-fe-lint fix",
-    "test": "jest",
-    "init": "pnpm install && pnpm run build"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
