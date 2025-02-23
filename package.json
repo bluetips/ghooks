@@ -6,8 +6,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm ",
     "prepare": "husky install",
-    "init": "SET NODE_OPTIONS=--openssl-legacy-provider&&pnpm install && pnpm run build",
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider&&pnpm run dev",
+    "init": "pnpm install && pnpm run build",
+    "start": "pnpm run dev",
     "dev": "dumi dev",
     "build": "pnpm -r --filter=./packages/* run build",
     "build:doc": "dumi build",
